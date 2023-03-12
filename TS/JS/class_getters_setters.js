@@ -1,17 +1,14 @@
-class Person{
-    private _age:number;
-    private firstName:string;
-    private lastName:string;
-
-    public get age(){
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+class Person {
+    get age() {
         return this._age;
     }
-
-    public set age(theAge:number){
-        if(theAge <=0 || theAge >=200){
+    set age(theAge) {
+        if (theAge <= 0 || theAge >= 200) {
             console.log("The age is invalid");
         }
-        else{
+        else {
             this._age = theAge;
         }
     }
@@ -19,6 +16,3 @@ class Person{
 let person = new Person();
 person.age = -1; //will call setter method
 console.log(person.age); //will call getter method
-
-
-export{}
