@@ -1,0 +1,6 @@
+{
+  "devDependencies": {
+    "grunt": "^1.6.1",
+    "grunt-ts": "^6.0.0-beta.22"
+  }
+}
