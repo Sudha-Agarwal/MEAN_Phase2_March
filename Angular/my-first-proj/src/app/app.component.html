@@ -1,7 +1,16 @@
+<a routerLink = "/home">Home</a>&nbsp;
+<a routerLink = "/about-us">About us</a>&nbsp;
+<a routerLink = "/product-list">Products</a>
+
+<!--
 <h2>Root component!!!</h2>
-{{title}} <!--interpolation-->
+{{title}} interpolation
 {{name}}
-<!--Property binding-->
+Property binding
 <img [src]="imgSrc">
-<button [disabled]="isDisabled">Click me</button>
+<button (click) ="updateName()" [disabled]="isDisabled">Click me</button>
 <app-home></app-home>
+-->
+<router-outlet></router-outlet>
+
+<!--<p>after router-outlet</p>-->

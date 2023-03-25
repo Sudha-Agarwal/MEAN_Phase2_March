@@ -11,5 +11,9 @@ export class AppComponent {
   imgSrc = "../assets/download.png";
   isDisabled:boolean = false;
 
+  updateName(){
+    this.name = "Sudha1"
+  }
+
 
 }
