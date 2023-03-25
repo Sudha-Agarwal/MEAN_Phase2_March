@@ -13,8 +13,9 @@ const routes: Routes = [
     children:[
       {path:'', component:ProductListComponent},
       {path:'mobile-list', component: ProductMobileListComponent},
-      {path: 'laptop-list', component: ProductLaptopListComponent}
+      {path:'laptop-list', component: ProductLaptopListComponent}
     ]
+
 }
 ];
 

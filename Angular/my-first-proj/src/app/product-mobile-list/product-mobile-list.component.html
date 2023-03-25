@@ -1,1 +1,20 @@
-<p>product-mobile-list works!</p>
+
+<h2>Mobile List</h2>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Desciption</th>
+            <th>Type</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let product of products">
+            <td>{{product.id}}</td>
+            <td>{{product.name}}</td>
+            <td>{{product.description}}</td>
+            <td>{{product.type}}</td>
+        </tr>
+    </tbody>
+</table>
