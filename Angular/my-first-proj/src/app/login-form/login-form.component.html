@@ -1,0 +1,13 @@
+<p>login-form works!</p>
+<form #loginForm="ngForm">
+   Email: <input type="email" name="email" 
+   [(ngModel)] = "user.email" #email="ngModel"
+   required>
+
+
+   Password: <input type="password" name="password" required>
+
+   <button type="submit">Submit</button>
+</form>
+
+<div *ngIf="isValid"><p>Div is valid</p></div> 

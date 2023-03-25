@@ -11,7 +11,7 @@ productId:string;
   constructor(private route:ActivatedRoute){
   }
   ngOnInit(): void {
-    alert("ngOninit called");
+    //alert("ngOninit called");
     this.productId = this.route.snapshot.paramMap.get('id');
     
     //send a request to server to fetch data corresponding to that particular id
