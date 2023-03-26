@@ -7,11 +7,12 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./registration-form.component.css']
 })
 export class RegistrationFormComponent {
+  emailPattern = '^[a-zA-Z0-9._]+@[a-zA-z0-9.-]+\\.[a-z]{2,4}$';
 
-  RegistrationForm = new FormGroup({
+    RegistrationForm = new FormGroup({
     firstName: new FormControl('',[Validators.required, Validators.minLength(3)]),
     lastName: new FormControl('',[Validators.required, Validators.minLength(3)]),
-    email: new FormControl('',[Validators.required]),
+    email: new FormControl('',[Validators.required, Validators.pattern(this.emailPattern), this.emailDomainValidator]),
     password: new FormControl('',[Validators.required, Validators.minLength(6)])
   });
 
@@ -21,6 +22,22 @@ export class RegistrationFormComponent {
 
   get f(){
     return this.RegistrationForm.controls;
+  }
+
+  emailDomainValidator(control:FormControl){
+    let email = control.value;
+
+    if(email && email.indexOf("@")!=-1){
+      let[first,domain] = email.split("@");
+      if(domain!== "gmail.com"){
+        return {
+          emailDomain:{
+            parseDomain:domain
+          }
+        }
+      }
+    }
+    return null;
   }
 
 
