@@ -1,0 +1,25 @@
+<p>json-data works!</p>
+
+<h2>Mobile List</h2>
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>username</th>
+            <th>email</th>
+            <th>View</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let dt of data">
+            <td>{{dt.id}}</td>
+            <td>{{dt.name}}</td>
+            <td>{{dt.username}}</td>
+            <td>{{dt.email}}</td>
+            <td>
+                <a>View</a>
+            </td>
+        </tr>
+    </tbody>
+</table>

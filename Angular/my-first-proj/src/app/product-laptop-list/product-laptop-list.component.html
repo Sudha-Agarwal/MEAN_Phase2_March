@@ -1,1 +1,24 @@
-<p>product-laptop-list works!</p>
+
+<h2>Mobile List</h2>
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Desciption</th>
+            <th>Type</th>
+            <th>View</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let product of products">
+            <td>{{product.id}}</td>
+            <td>{{product.name}}</td>
+            <td>{{product.description}}</td>
+            <td>{{product.type}}</td>
+            <td>
+                <a [routerLink] = "['../mobile-detail', product.id]">View</a>
+            </td>
+        </tr>
+    </tbody>
+</table>

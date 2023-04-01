@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { HomeComponent } from './home/home.component';
+import { JsonDataComponent } from './json-data/json-data.component';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { ProductLaptopListComponent } from './product-laptop-list/product-laptop-list.component';
 import { ProductListComponent } from './product-list/product-list.component';
@@ -22,7 +23,8 @@ const routes: Routes = [
 
 },
 {path:'login-form',component: LoginFormComponent},
-{path:'registeration-form', component: RegistrationFormComponent}
+{path:'registeration-form', component: RegistrationFormComponent},
+{path:'json-data', component: JsonDataComponent}
 ];
 
 @NgModule({

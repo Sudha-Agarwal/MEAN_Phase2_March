@@ -19,15 +19,16 @@ export class ProductMobileListComponent implements OnInit, OnDestroy{
   }
   ngOnInit(): void {
     this.sub = this.ds.getProducts('Mobile')
-    .subscribe(products => this.products=products);    
+    .subscribe({
+      next: productsFromObs => this.products=productsFromObs,
+      error: err=>console.log(err),
+      complete: ()=>console.log('complete')
+    });    
+    }
   }
 
-  
 
 
 
 
 
-
-
-}
