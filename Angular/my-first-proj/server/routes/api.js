@@ -7,8 +7,22 @@ api.get('/data', function(req,res){
 });
 
 api.post('/data', (req,res) => {
-    console.log("post request received");
+
+    console.log(req.body);
+    const id = req.body.id;
+    const name = req.body.name;
+    console.log(id);
+
+    if(name === "Sudha"){
+        res.send({data:"auth"})
+    }
+    else{
+        res.send({data:"not auth"});
+    }
+    //console.log("post request received");
 });
+
+
 
 module.exports = api;
 

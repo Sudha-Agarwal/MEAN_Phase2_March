@@ -10,8 +10,9 @@ export class DataService {
   json_url = "https://jsonplaceholder.typicode.com/users";
 
   //base_url = "http://localhost:8080";
+
   headers:HttpHeaders;
-  dataTosend = [{id:1,name:"Sudha"}];
+  dataTosend = {id:1,name:"Sudha"};
 
 
   constructor(private http:HttpClient) { 
@@ -34,17 +35,18 @@ export class DataService {
 
   getDataFromServer():Observable<any[]>{
     return this.http.get<any[]>(this.json_url);
+    
   }
 
   getDatafromServer1(){
     return this.http.get(this.json_url,{headers:this.headers})
   } 
 
-  postDataToServer(){
-    return this.http.post(this.json_url,this.dataTosend,{headers:this.headers});
+  postDataToServer(id:number,username:string){
+    return this.http.post(this.json_url,{id,username},{headers:this.headers});
   }
 
-  postDataToNodeServer(){
-    return this.http.post('api/data',this.dataTosend);
+  postDataToNodeServer(id:number,username:string):Observable<any>{
+    return this.http.post<any>('api/data',{id,username});
   }
 }
