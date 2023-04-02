@@ -8,6 +8,7 @@ import { ProductLaptopListComponent } from './product-laptop-list/product-laptop
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductMobileDetailComponent } from './product-mobile-detail/product-mobile-detail.component';
 import { ProductMobileListComponent } from './product-mobile-list/product-mobile-list.component';
+import { QuizComponent } from './quiz/quiz.component';
 import { RegistrationFormComponent } from './registration-form/registration-form.component';
 
 const routes: Routes = [
@@ -24,7 +25,8 @@ const routes: Routes = [
 },
 {path:'login-form',component: LoginFormComponent},
 {path:'registeration-form', component: RegistrationFormComponent},
-{path:'json-data', component: JsonDataComponent}
+{path:'json-data', component: JsonDataComponent},
+{path:'quiz',component:QuizComponent}
 ];
 
 @NgModule({

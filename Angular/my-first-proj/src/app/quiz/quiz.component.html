@@ -1,0 +1,13 @@
+<div class="container">
+   <div *ngFor = "let question of questions">
+    <ul>
+        <p>{{question.question}}</p>
+        <li *ngFor="let choice of question.choices; let i=index">
+            {{choice}}</li>
+    </ul>
+    <button class="btn btn-primary">Submit</button>
+    <div *ngIf="isSubmitted">
+
+    </div>
+   </div>
+</div>

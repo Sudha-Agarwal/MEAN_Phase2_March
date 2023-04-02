@@ -16,6 +16,7 @@ import { ProductMobileDetailComponent } from './product-mobile-detail/product-mo
 import { LoginFormComponent } from './login-form/login-form.component';
 import { RegistrationFormComponent } from './registration-form/registration-form.component';
 import { JsonDataComponent } from './json-data/json-data.component';
+import { QuizComponent } from './quiz/quiz.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +28,8 @@ import { JsonDataComponent } from './json-data/json-data.component';
     ProductMobileDetailComponent,
     LoginFormComponent,
     RegistrationFormComponent,
-    JsonDataComponent
+    JsonDataComponent,
+    QuizComponent
   ],
   imports: [
     BrowserModule,

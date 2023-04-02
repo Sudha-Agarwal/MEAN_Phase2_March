@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-registration-form',
@@ -7,6 +8,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./registration-form.component.css']
 })
 export class RegistrationFormComponent {
+  constructor(private ds:DataService){}
   emailPattern = '^[a-zA-Z0-9._]+@[a-zA-z0-9.-]+\\.[a-z]{2,4}$';
 
     RegistrationForm = new FormGroup({
@@ -17,6 +19,7 @@ export class RegistrationFormComponent {
   });
 
   submit(){
+    this.ds.createNewUser(this.RegistrationForm.value);    
     console.table(this.RegistrationForm.value);
   }
 

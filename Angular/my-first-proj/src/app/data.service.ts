@@ -49,4 +49,12 @@ export class DataService {
   postDataToNodeServer(id:number,username:string):Observable<any>{
     return this.http.post<any>('api/data',{id,username});
   }
+
+  getQuiz():Observable<any[]>{
+    return this.http.get<any[]>('api/quiz');
+  }
+
+  createNewUser(value:any){
+    return this.http.post('api/register-user',value);
+  }
 }
