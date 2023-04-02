@@ -12,9 +12,17 @@ data:any[];
 
   }
   ngOnInit(): void {
-    this.ds.getDataFromServer().subscribe(
-      data=>this.data = data
-    )   
+    this.ds.getDataFromServer().subscribe({
+      next:   data=>this.data = data,
+      error: err=>alert("Data not found"),
+      complete: ()=>console.log("complete")
+    }
+   
+    ) ;
+    
+    this.ds.postDataToNodeServer().subscribe(
+      data =>console.log(data)
+    )
   }
 
   

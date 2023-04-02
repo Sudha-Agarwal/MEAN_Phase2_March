@@ -1,15 +1,24 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { Product } from './product';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
-  json_url = "https://jsonplaceholder.typicode.com/users"
+  json_url = "https://jsonplaceholder.typicode.com/users";
 
-  constructor(private http:HttpClient) { }
+  //base_url = "http://localhost:8080";
+  headers:HttpHeaders;
+  dataTosend = [{id:1,name:"Sudha"}];
+
+
+  constructor(private http:HttpClient) { 
+    this.headers = new HttpHeaders().set('content-type','application/json');
+    
+  }
+
 
   products:Product[] = [
     {id:1, name:'Product 1', description:'Description 1', type:'Mobile'},
@@ -27,7 +36,15 @@ export class DataService {
     return this.http.get<any[]>(this.json_url);
   }
 
+  getDatafromServer1(){
+    return this.http.get(this.json_url,{headers:this.headers})
+  } 
 
+  postDataToServer(){
+    return this.http.post(this.json_url,this.dataTosend,{headers:this.headers});
+  }
 
- 
+  postDataToNodeServer(){
+    return this.http.post('api/data',this.dataTosend);
+  }
 }
