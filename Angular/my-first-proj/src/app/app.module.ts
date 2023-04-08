@@ -19,6 +19,10 @@ import { JsonDataComponent } from './json-data/json-data.component';
 import { QuizComponent } from './quiz/quiz.component';
 import { CourseChildComponent } from './course-child/course-child.component';
 import { CourseParentComponent } from './course-parent/course-parent.component';
+import { MyLibrarySudhaAModule } from 'my-library-sudha-a';
+import { MyLibraryAnujKModule } from 'my-library-anuj-k';
+import { BindingsComponent } from './bindings/bindings.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,14 +37,17 @@ import { CourseParentComponent } from './course-parent/course-parent.component';
     JsonDataComponent,
     QuizComponent,
     CourseChildComponent,
-    CourseParentComponent
+    CourseParentComponent,
+    BindingsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule    
+    HttpClientModule,
+    MyLibrarySudhaAModule    ,
+    MyLibraryAnujKModule
   ],
   providers: [],
   bootstrap: [AppComponent]

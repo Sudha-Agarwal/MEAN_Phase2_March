@@ -24,7 +24,8 @@ export class LoginFormComponent {
     this.ds.checkLogin(this.user).subscribe({
       next:data=>{
         if(data){
-          alert("Login successfull")
+          alert("Login successfull");
+          sessionStorage.setItem("user",this.user.email);
           this.router.navigate(['/quiz']);
       }},
       error:err=>{
@@ -33,6 +34,7 @@ export class LoginFormComponent {
           this.user = {email:'',password:''};
         };
       }
+
     })
   }
 

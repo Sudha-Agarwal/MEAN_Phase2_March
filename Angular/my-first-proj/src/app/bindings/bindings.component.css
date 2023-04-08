@@ -1,0 +1,32 @@
+.red{
+    color:red;
+
+}
+
+.size20{
+    font-size: 20px;
+}
+
+.active{
+    color:blue;
+}
+
+.inactive{
+    color:green;
+}
+
+.stock-badge{
+    background-color: green;
+    color:white;
+    padding: 5px;
+    border-radius: 5px;
+
+}
+
+.no-stock{
+    background-color: grey;
+    color:white;
+    padding: 5px;
+    border-radius: 5px;
+
+}

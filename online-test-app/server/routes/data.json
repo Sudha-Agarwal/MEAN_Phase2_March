@@ -38,7 +38,7 @@
       "Rhino"
     ],
     "answerIndex": "Giraffe"
-  },  
+  },
   {
     "question": "QER",
     "choices": [
@@ -68,5 +68,15 @@
       "Vatican City"
     ],
     "answerIndex": "Vatican City"
+  },
+  {
+    "question": "What is the most popular front end framework",
+    "choices": [
+      "Angular",
+      "React",
+      "Vue",
+      "Flutter"
+    ],
+    "answerIndex": "Angular"
   }
 ]

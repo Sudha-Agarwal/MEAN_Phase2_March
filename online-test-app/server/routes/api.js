@@ -77,6 +77,7 @@ api.post('/check-login', (req,res)=>{
         }
         else{
             const jsonData = JSON.parse(data);
+
             const exists = jsonData.some(obj => obj.email === email && obj.password === password);
             console.log(exists);
 

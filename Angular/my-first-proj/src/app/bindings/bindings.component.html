@@ -1,0 +1,36 @@
+<div class="container">
+
+<div [className]="'red size20'">Test</div>
+
+<div [className] = "cssStringVar">Test</div>
+
+<div [className] = "hasError()? 'red':'size20'">Conditional CSS</div>
+
+<div [class.active] = "isActive" [class.inactive] = "!isActive">Active</div>
+
+
+<div [ngClass] = "{'red':isTrue()}">ngClass</div>
+
+<div [ngClass] = "isTrue()?'red':'active'">ngClass</div>
+
+
+<div [style.color] = "'red'">Style binding</div>
+
+<button [style.opacity] = "isDisabled? 0.5:1">Click me</button>
+
+<button [style.color] = "status=='error'?'red':'blue'">click</button>
+
+<button [style.color] = "getColor()">Click</button>
+
+<div [ngStyle] = "{'font-size':'20px', 'color':'red'}">Style directive</div>
+
+<div class="card" *ngFor = "let product of products">
+    <div class="card-header">{{product.description}}</div>
+    <div class="card-footer">
+        <div [ngClass] ="isProdInStock(product)?'stock-badge':'no-stock'">
+            {{isProdInStock(product)? 'in Stock':'Out of Stock'}}
+        </div>
+    </div>
+</div>
+
+</div>
