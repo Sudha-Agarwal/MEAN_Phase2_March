@@ -17,6 +17,8 @@ import { LoginFormComponent } from './login-form/login-form.component';
 import { RegistrationFormComponent } from './registration-form/registration-form.component';
 import { JsonDataComponent } from './json-data/json-data.component';
 import { QuizComponent } from './quiz/quiz.component';
+import { CourseChildComponent } from './course-child/course-child.component';
+import { CourseParentComponent } from './course-parent/course-parent.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +31,9 @@ import { QuizComponent } from './quiz/quiz.component';
     LoginFormComponent,
     RegistrationFormComponent,
     JsonDataComponent,
-    QuizComponent
+    QuizComponent,
+    CourseChildComponent,
+    CourseParentComponent
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { CourseParentComponent } from './course-parent/course-parent.component';
 import { HomeComponent } from './home/home.component';
 import { JsonDataComponent } from './json-data/json-data.component';
 import { LoginFormComponent } from './login-form/login-form.component';
@@ -26,7 +27,8 @@ const routes: Routes = [
 {path:'login-form',component: LoginFormComponent},
 {path:'registeration-form', component: RegistrationFormComponent},
 {path:'json-data', component: JsonDataComponent},
-{path:'quiz',component:QuizComponent}
+{path:'quiz',component:QuizComponent},
+{path:'parent',component:CourseParentComponent}
 ];
 
 @NgModule({

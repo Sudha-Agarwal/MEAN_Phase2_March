@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { Product } from './product';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { User } from './user';
 
 @Injectable({
   providedIn: 'root'
@@ -18,19 +18,6 @@ export class DataService {
   constructor(private http:HttpClient) { 
     this.headers = new HttpHeaders().set('content-type','application/json');
     
-  }
-
-
-  products:Product[] = [
-    {id:1, name:'Product 1', description:'Description 1', type:'Mobile'},
-    {id:2, name:'Product 1', description:'Description 1', type:'Mobile'},
-    {id:3, name:'Product 1', description:'Description 1', type:'Mobile'},
-    {id:4, name:'Product 1', description:'Description 1', type:'Laptop'}
-  ]
-
-  getProducts(type:string):Observable<Product[]>{
-    const product = this.products.filter(p =>p.type === type)
-    return of(product);
   }
 
   getDataFromServer():Observable<any[]>{
@@ -57,4 +44,15 @@ export class DataService {
   createNewUser(value:any):Observable<any>{
     return this.http.post('api/register-user',value);
   }
+
+  checkLogin(user:any):Observable<boolean>{
+    return this.http.post<boolean>('api/check-login', user);
+  }
+
+  addQuestion(quiz:any):Observable<any>{
+    return this.http.post<any>('api/add-question',quiz);
+
+  }
+
+  
 }

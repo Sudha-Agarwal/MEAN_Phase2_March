@@ -3,15 +3,15 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { DataService } from '../data.service';
 
 @Component({
-  selector: 'app-registration-form',
-  templateUrl: './registration-form.component.html',
-  styleUrls: ['./registration-form.component.css']
+  selector: 'app-registeration-form',
+  templateUrl: './registeration-form.component.html',
+  styleUrls: ['./registeration-form.component.css']
 })
-export class RegistrationFormComponent {
+export class RegisterationFormComponent {
   constructor(private ds:DataService){}
   emailPattern = '^[a-zA-Z0-9._]+@[a-zA-z0-9.-]+\\.[a-z]{2,4}$';
 
-    RegistrationForm = new FormGroup({
+  RegistrationForm = new FormGroup({
     firstName: new FormControl('',[Validators.required, Validators.minLength(3)]),
     lastName: new FormControl('',[Validators.required, Validators.minLength(3)]),
     email: new FormControl('',[Validators.required, Validators.pattern(this.emailPattern), this.emailDomainValidator]),

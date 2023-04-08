@@ -8,7 +8,7 @@ import { DataService } from '../data.service';
 })
 export class QuizComponent implements OnInit{
   questions:any[];
-
+  isSubmitted:boolean=false;
   constructor(private ds:DataService){}
 
   ngOnInit(): void {
