@@ -2,3 +2,8 @@
 
 
 <app-course-child [message] = "childMessage" (messageSent) = "onMessageReceived($event)"></app-course-child>
+
+
+<button (click) = "onClick()">Click me</button>
+
+<app-course-child #child-course></app-course-child>

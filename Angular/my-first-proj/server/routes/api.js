@@ -4,9 +4,10 @@ const fs = require('fs');
 
 
 api.get('/data', function(req,res){
-
     res.send("Hello World");
 });
+
+//http://localhost:3000/api/data
 
 api.post('/data', (req,res) => {
 
@@ -24,6 +25,7 @@ api.post('/data', (req,res) => {
     //console.log("post request received");
 });
 
+//http://loclahost:3000/api/quiz
 api.get('/quiz', function(req,res){
     fs.readFile(__dirname + '/data.json', function(err,data){
         if(err){

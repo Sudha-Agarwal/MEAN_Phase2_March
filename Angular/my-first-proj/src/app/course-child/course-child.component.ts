@@ -14,4 +14,8 @@ export class CourseChildComponent {
     this.messageSent.emit(messageToParent);
   }
 
+  doSomething(){
+    alert("called child component");
+  }
+
 }

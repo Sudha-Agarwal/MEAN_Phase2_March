@@ -6,13 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'my-first-proj!!!!';
-  name:string = "Sudha";
-  imgSrc = "../assets/download.png";
-  isDisabled:boolean = false;
-
-  updateName(){
-    this.name = "Sudha1"
-  }  
-
+  title = 'angular-pwa';
 }

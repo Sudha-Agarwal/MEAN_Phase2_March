@@ -23,7 +23,7 @@ data:any[];
       complete: ()=>console.log("complete")
     }   
     ) ;
-        this.ds.postDataToNodeServer(1,"sudha").subscribe(
+        this.ds.postDataToNodeServer("1","sudha").subscribe(
       data =>console.log(data.data)
     )
   }

@@ -46,7 +46,7 @@ export class DataService {
     return this.http.post(this.json_url,{id,username},{headers:this.headers});
   }
 
-  postDataToNodeServer(id:number,username:string):Observable<any>{
+  postDataToNodeServer(id:string,username:string):Observable<any>{
     return this.http.post<any>('api/data',{id,username});
   }
 

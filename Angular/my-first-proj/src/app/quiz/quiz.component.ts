@@ -15,6 +15,12 @@ export class QuizComponent implements OnInit{
     this.ds.getQuiz().subscribe({
       next: data=>this.questions = data
     })
+
+    /*this.ds.getQuiz().subscribe({
+      next: data =>console.log(data),
+      error: err=> console.log(err),
+      complete:()=>console.log('data complete')
+    });*/
    
   }
 

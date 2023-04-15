@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-course-parent',
@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class CourseParentComponent {
   childMessage:string = "message from parent!!";
+  @ViewChild('course-child', {static:false}) Child:ElementRef;
 
   course = [
     {id:1, courseName:"Angular"},
@@ -16,6 +17,10 @@ export class CourseParentComponent {
 
   onMessageReceived(message:string){
     console.log("received from child " + message);
+  }
+
+  onClick(){
+    this.Child.nativeElement.doSomething();
   }
 
 }
